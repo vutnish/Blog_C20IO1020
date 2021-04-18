@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+
+    <!--font cdn icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+    <!--style.css style-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    
+    
+    <!--header-->
+        <header id="header" class="shadow bg-light">
+            <nav class="container navbar">
+                <a href="#" class="nav-brand text-dark">Blog
+                </a>
+    <!--toggle btn--> 
+                <button class="toggle-button">
+                    <span><i class="fas fa-bars"></i></span>
+                </button>
+             <div class="collapse">
+                    <ul class="navbar-nav">
+                        <a href="" class="nav-link">home</a>
+                        <a href="" class="nav-link">blog</a>
+                        <a href="" class="nav-link">about</a>
+                        <a href="" class="nav-link">contact</a>
+                        
+                    </ul>
+                </div>
+                <div class="collapse">
+                    <ul class="navbar-nav">
+                        <div class="search-box">
+                            <a href="#" class="nav-link"><i class="fas fa-search"></i></a>
+                            <a href="#" class="nav-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
+                            
+                            <a class="nav-link" href="/userDash" >
+                                <i  class="far fa-user"></i>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    <!--header-end-->
+
+    
+<!--main site-->
+        <main id="site-main">
+            <!--blog post section-->
+            <section id="posts">
+                <div class="container">
+                    <div class="grid">
+                        <!--article-->
+                        <div class="grid-item">
+                            <article class="article">
+                                <div class="card">
+                                    <div class="overflow-img">
+                                        <a href="#">
+                                            <img src="../materials/download.jpg"class="img-fluid" alt="dog">
+                                        </a>
+                                    </div>
+                                    <div class="card-body-text-body px-1">
+                                        <a href="#" class="text-title display-1 text-dark">
+                                            Looking for some feedback for this rejected track
+                                            technology
+                                        </a>
+                                        <p class="secondary-title text-secondary display-3">
+                                            <span><i class="far fa-clock text-primary"></i> Clock Wed 02, 2021</span>
+                                            <span><i class="far fa-comments text-primary"></i> 12</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!--artile end-->
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- .Blog Post Section -->
+            <div class="text-center">
+                <button class="btn btn-primary secondary-title text-light"><a href="#" onclick="document.getElementById('add-form').style.display='block'" style="width: auto;">Add post</a></button>
+            </div>
+            <!--login-->
+
+    <div id='add-form'class='login-page'>
+        <div class="form-box-addPost">
+            <div class='button-box'>
+                <div id='btn'></div>
+                <button type='button'onclick='addPost()'class='toggle-btn'>AddPost</button>
+            </div>
+            <form action="addPost" method="POST" id='addPost' class='input-group-login' enctype="multipart/form-data">
+                <input type='text' class="title" name="title" placeholder='title ' required >
+                
+                <input type='hidden' class="title" name="username"   value="<%= username %>" required >
+                <input type='text' name="texts" class="texts"
+                placeholder='body' required>
+                <input type="file" name="image" class="texts" required>
+                
+                <button class="submit-btn" type="submit">post</button>
+            </form>
+            <form action="delete1" method="POST" id='delete' class='input-group-login'>
+                
+            </form>
+            
+        </div>
+    </div>
+            
+<!-- Blog carasuel-->
+        </main>
+        
+
+        
+
+<!--main site-->
+</body>
+<!-- masonry libray for horizontal grid -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ==" crossorigin="anonymous"></script>
+<!--uildel-->
+<script src="../js/main.js"></script>
+</html>

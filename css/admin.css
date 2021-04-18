@@ -1,0 +1,250 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #9acfdf;
+  color: #fff;
+}
+.u-name {
+  font-size: 30px;
+  padding-left: 17px;
+  color: #fff;
+}
+.u-name b {
+  color: #725826;
+}
+.header i {
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+}
+.header i:hover {
+  color: #ff3f3f;
+}
+.user-p {
+  text-align: center;
+  padding-left: 10px;
+  padding-top: 25px;
+}
+.user-p img {
+  width: 100px;
+  border-radius: 50%;
+}
+.user-p h4 {
+  color: #fff;
+  padding: 5px 0;
+}
+.side-bar {
+  width: 250px;
+  background: #aad5d4;
+  min-height: 100vh;
+  transition: 500ms width;
+}
+.body {
+  display: flex;
+}
+.section-1 {
+  width: 100%;
+  background: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section-1 h1 {
+  color: rgb(102, 56, 56);
+  font-size: 60px;
+}
+.section-1 p {
+  color: #99e7ff;
+  font-size: 20px;
+  background: #fff;
+  padding: 7px;
+  border-radius: 5px;
+}
+.section-1 table {
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.section-1 table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+.section-1 table th,
+.section-1 table td {
+  padding: 12px 15px;
+}
+
+.section-1 table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.section-1 table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.section-1 table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.section-1 table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.side-bar ul {
+  margin-top: 20px;
+  list-style: none;
+}
+.side-bar ul li {
+  font-size: 16px;
+  padding: 15px 0px;
+  padding-left: 20px;
+  transition: 500ms;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.side-bar ul li:hover {
+  background: #82e4f5;
+}
+.side-bar ul li a {
+  text-decoration: none;
+  color: #eee;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+.side-bar ul li a i {
+  display: inline-block;
+  padding-right: 10px;
+  font-size: 23px;
+}
+#navbtn {
+  display: inline-block;
+  margin-left: 70px;
+  font-size: 20px;
+  transition: 500ms color;
+}
+#checkbox {
+  display: none;
+}
+#checkbox:checked ~ .body .side-bar {
+  width: 60px;
+}
+#checkbox:checked ~ .body .side-bar .user-p {
+  visibility: hidden;
+}
+#checkbox:checked ~ .body .side-bar a span {
+  display: none;
+}
+
+.edit {
+  position: absolute;
+  margin: 2% auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 350px;
+  padding: 80px 40px;
+  background: rgba(139, 181, 187, 0.8);
+  z-index: 1;
+  border-color: rgb(84, 202, 218);
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 5%;
+}
+.editH2 h2 {
+  color: #111;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 275px;
+
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+}
+.user1 {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.pass1 {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.email1 {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.submit {
+  background: #0066a2;
+
+  color: white;
+
+  border-style: outset;
+
+  border-color: #0066a2;
+
+  height: 50px;
+
+  width: 100px;
+
+  font: bold 15px arial, sans-serif;
+
+  text-shadow: none;
+}
+.buttonAddUser {
+  position: relative;
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: rgb(
+    118,
+    205,
+    255
+  ); /*for compatibility with older browsers*/
+  background-image: linear-gradient(rgb(85, 101, 221), rgb(165, 218, 243));
+
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: 100;
+}

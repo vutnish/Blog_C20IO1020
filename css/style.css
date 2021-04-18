@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital@1&family=Poppins&family=Roboto&display=swap");
+
+/*font-family: 'DM Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;*/
+
+/*root style*/
+:root {
+  --light: #f8f9fa;
+  --secondary: #adb5bd;
+  --dark: #343a40;
+  --primary-color: #99e7ff;
+  --secondary-color: #2ec4b6;
+  --border: #e9ecef;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+* > * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*global style*/
+.text-light {
+  color: var(--light);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-dark {
+  color: var(--dark);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: auto;
+}
+.img-fluid {
+  width: 100%;
+}
+.display-1 {
+  font-size: 22px;
+}
+
+.display-2 {
+  font-size: 16px;
+}
+
+.display-3 {
+  font-size: 14px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+.btn {
+  padding: 15px 20px;
+  border: none;
+}
+
+.btn-primary {
+  border-radius: 4px;
+  background-color: var(--secondary-color);
+}
+
+/*section style*/
+/*navigation menu*/
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.nav-brand {
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  align-self: center;
+  font-size: 32px;
+}
+.collapse {
+  align-self: center;
+}
+.nav-link {
+  font-size: 18px;
+  margin: 12px;
+  color: var(--dark);
+  font-family: "Poppins", sans-serif;
+}
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.search-box {
+  display: inline;
+  border-right: 1px solid var(--secondary);
+  padding-right: 10px;
+  margin-right: 8px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.toggle-button {
+  font-size: 21px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+  margin: 8px 10px;
+  display: none;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+/*navigation mennu*/
+
+/* ----------- Main Section ---------- */
+
+#site-main {
+  margin-top: 8em;
+}
+
+#posts {
+  margin-bottom: 5em;
+}
+
+.grid {
+  margin: 0 auto;
+}
+
+.grid .grid-item {
+  width: calc(33.3333% - 20px);
+  margin-bottom: 3em;
+}
+.grid1 {
+  margin: 0 auto;
+}
+
+.grid1 .grid1-item {
+  width: calc(40% - 100px);
+  margin-bottom: 3em;
+}
+
+/* ----------- .Main Section ---------- */
+
+/*media*/
+
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  #site-main {
+    margin-top: 14em;
+  }
+}
+@media (max-width: 768px) {
+  .grid .grid-item {
+    width: calc(50% - 20px);
+  }
+
+  .col-3 {
+    flex: 0 0 100%;
+    max-width: calc(100% - 50px);
+    padding-top: 40px 50px;
+  }
+}
+@media (max-width: 574px) {
+  .toggle-button {
+    display: initial;
+  }
+
+  .collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.8s cubic-bezier(0.51, -0.15, 0, 0.98);
+  }
+
+  .collapse .nav-link {
+    display: block;
+    text-align: center;
+  }
+
+  .search-box {
+    border-right: none;
+  }
+
+  .collapse-toggle {
+    max-height: 500px;
+  }
+  .grid .grid-item {
+    width: calc(100% - 20px);
+  }
+
+  #site-main {
+    margin-top: 6em;
+  }
+}
+/*media*/
